@@ -1,0 +1,71 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5f5f5;
+  --card-color: #3498db;
+  --matched-color: #2ecc71;
+  --text-color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+.controls select,
+.controls button {
+  padding: 8px 12px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+}
+
+.stats {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#game-board {
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+  max-width: 90vw;
+}
+
+.card {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  height: 80px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card.flipped {
+  background-color: var(--matched-color);
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 600px) {
+  .card {
+    height: 100px;
+    font-size: 2.5rem;
+  }
+}
