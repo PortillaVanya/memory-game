@@ -1,0 +1,21 @@
+name: Probar texto
+
+on:
+  push:
+    branches: [main, test]
+  pull_request:
+    branches: [main, test]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 'Hello world'
+      run: echo "hello world"
+    
+    - name: Dime la fecha
+      run: date
+    
+    - name: Muestra el contenido del directorio
+      run: ls -la
